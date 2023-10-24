@@ -23,8 +23,10 @@
 
     
 }
-@media screen and (max-width:1200px) {
-
+@media screen and (max-width:1100px) {
+  .royxat{
+    width: 250px;
+  }
     
 }
 @media screen and (max-width:992px) {

@@ -1,11 +1,17 @@
 import React, { useContext } from "react";
 import { Context } from "../context/Context";
-import { Box, Button, Container, Heading, Image, Text } from "@chakra-ui/react";
-import { DeleteIcon, LinkIcon, StarIcon } from "@chakra-ui/icons";
+import { Box, Button, Container, Grid, GridItem, HStack, Heading, Image, Text } from "@chakra-ui/react";
+import { ArrowForwardIcon, DeleteIcon, LinkIcon, StarIcon } from "@chakra-ui/icons";
 import basketLogo from "../assets/image/basket.png";
 import { Link } from "react-router-dom";
+import toj from "../assets/icon/toj.svg";
+import basket from "../assets/icon/basket.svg";
+import star from "../assets/icon/star.svg";
+
+
+
 export const Savatcha = () => {
-  const { basket,AllTanlanganlar,AllTaqooslangan} = useContext(Context);
+  const { basket,AllTanlanganlar,AllTaqooslangan,data} = useContext(Context);
   // const DeleteData = (id)=>{ // }
   const AddTanlanganlar = (item) => {
     AllTanlanganlar(item);
@@ -39,9 +45,10 @@ export const Savatcha = () => {
               </Link>
             </Container>
           )}
-        <Box display={"flex"} gap={"20px"} >
+        <Box display={'flex'} justifyContent={{base:'none',lg:'space-between'}}flexDirection={{base:'column',lg:'row'}} gap={'40px'}mb={'50px'}>
+        <Box display={'flex'} flexDirection={'column'}>
 
-            <Box w={"1177px"}>
+
               {basket.map((item) => (
                 <Box
                   borderRadius={'10px'}
@@ -52,24 +59,26 @@ export const Savatcha = () => {
                   alignItems={"center"}
                   key={item.id}
                   background={"#fff"}
-                  w={"100%"}
+                  w={{lg:'670px',xl:'932px','2xl':'1000px'}}
+                  flexDirection={{base:'column',md:'row'}}
                 >
-                  <Box display={"flex"} alignItems={"center"}>
+                  <Box display={"flex"} w={'100%'} alignItems={{base:'start',md:"center"}}>
                     <Image w={"120px"} h={"120px"} src={item.img} />
                     <Box display={"flex"} flexDirection={"column"}>
                       <Box display={"flex"} gap={3}>
                         <Text
                           color={"#282f3c"}
-                          fontSize={"18px"}
+                          fontSize={{base:'13px',md:"18px"}}
                           fontWeight={"800"}
                         >
                           {item.current_price_formatted}
                         </Text>
                         <Heading
+                          display={{base:"none",md:'flex'}}
                           p={"5px 8px"}
                           color={"white"}
                           borderRadius={"100px"}
-                          fontSize={"16px"}
+                          fontSize={{base:'13px',md:"18px"}}
                           background={"#DD1470"}
                         >
                           Toliq tolov{">"}
@@ -79,59 +88,52 @@ export const Savatcha = () => {
                         <Text
                           pt={1.2}
                           color={"#282f3c"}
-                          fontSize={"16px"}
+                          fontSize={{base:'10px',md:"18px"}}
                           fontWeight={"500"}
                           _hover={{ color: "#DD1470" }}
                         >
                           {item.slug}
                         </Text>
-                        <Text
-                          pt={1.2}
-                          p={"2px 5px"}
-                          background={"yellow.300"}
-                          borderRadius={"100px"}
-                        >
-                          {item.discount}
-                        </Text>
                       </Box>
                       <Text pt={2}>Mahsulot kodi: 4688</Text>
                     </Box>
                   </Box>
-                  <Box display={"flex"} gap={7} pr={7}>
+                  <Box w={{base:'100%',md:'auto'}} pl={{base:'20px',md:'0px'}}  display={"flex"} gap={7} pr={7}>
                     <DeleteIcon
+                     fontSize={{base:'20px',md:"30px"}}
                       onClick={() => DeleteData(item.id)}
                       _hover={{ color: "#DD1470" }}
                       className="savat__icons"
                       color={"rgb(148, 153, 165)"}
-                      w={"32px"}
-                      h={"32px"}
+
                     />
                     <StarIcon
+                     fontSize={{base:'20px',md:"30px"}}
                     onClick={()=>AddTanlanganlar(item)}
                       _hover={{ color: "#DD1470" }}
                       className="savat__icons"
                       color={"rgb(148, 153, 165)"}
-                      w={"32px"}
-                      h={"32px"}
+
                     />
                     <LinkIcon
+                     fontSize={{base:'20px',md:"30px"}}
                     onClick={()=>AllTaqooslangan(item)}
                       _hover={{ color: "#DD1470" }}
                       className="savat__icons"
                       color={"rgb(148, 153, 165)"}
-                      w={"32px"}
-                      h={"32px"}
+
                     />
                   </Box>
                 </Box>
               ))}
+
             </Box>
 
 
           {basket.length > 0 && (
             <Box
               p={"24px"}
-              w={"400px"}
+              w={{base:'100%',lg:'280px',xl:'300px','2xl':'360px'}}
               h={"auto"}
               borderRadius={"10px"}
               background={"#fff"}
@@ -169,6 +171,107 @@ export const Savatcha = () => {
             </Box>
           )}
         </Box>
+
+         {/* /////////         savatni pasi         ///////// */}
+
+
+        {data.length > 0 &&
+<>
+
+<Box display={'flex'}justifyContent={'space-between'}>
+<Heading fontSize={{base:'14px',sm:'24px'}}>Siz uchun maxsus</Heading>
+<Heading alignItems={'center'}fontWeight={'500'} fontSize={{base:'10px',sm:'16px'}} color={'#DD1470'}>Hammasini Ko'rish <ArrowForwardIcon/></Heading>
+  </Box>
+
+  <Grid
+  templateColumns={"repeat(20,1fr)"}
+  className="first-product"
+  gap={'15px'}
+  flexDirection={'column'}
+>
+ 
+  {data.map((item) => (
+    <GridItem
+      my={"30px"}
+      key={item.id}
+      h={"auto"}
+      background={"#fff"}
+      borderRadius={"12px"}
+      p={"16px"}
+      w={{base:"208px",lg:'244px'}}
+    >
+        <Box display={"flex"} justifyContent={"space-between"}>
+          <Image onClick={() => AddTaqqoslash(item)} src={toj} />
+          <StarIcon _hover={{color:'#DD1470'}}transition={'0.3s'} onClick={() => AddTanlanganlar(item)}w={"24px"}h={"24px"}/>
+        </Box>
+      <Link to={`/product/${item.id}`}>
+        <Image
+          py={"8px"}
+          w={"100%"}
+          h={"200px"}
+          objectFit={"cover"}
+          src={item.img}
+        />
+
+        <HStack>
+          <Image src={star} />{" "}
+          <Heading fontSize={"13px"} mt={"7px"}>
+            (5.0) 0 отзывов{" "}
+          </Heading>
+        </HStack>
+        <Heading mt={"5px"} fontSize={"19px"} color={"#DD1470"}>
+          {item.current_price_formatted}
+        </Heading>
+        <Heading
+          mt={"7px"}
+          fontSize={"14px"}
+          color={"#282F3C"}
+          fontWeight={"400"}
+        >
+          {item.title_name}
+        </Heading>
+        <Heading mt={"4px"} fontSize={"15px"}>
+          <span style={{ color: "#C0C0C0" }}>Бренд:  </span>
+          {item.brand_name}
+        </Heading>
+        </Link>
+        <Box
+          mt={"5px"}
+          display={"flex"}
+          alignItems={"center"}
+          gap={"8px"}
+          >
+         
+          <Button
+            className="savat__icons"
+            _hover={{
+              border: "1px solid #DD1470 ",
+              color: "#DD1470",
+            }}
+            transition={"0.3s ease"}
+            fontSize={"14px"}
+            h={"48px"}
+            border={"1px solid #F2F2F2"}
+            >
+            Hozirni oʻzidayoq <br /> xarid qilish
+          </Button>
+          <Button
+            h={"48px"}
+            p={"12px"}
+            background={"#DD1470"}
+            borderRadius={"9px"}
+            onClick={() => SubmitData(item)}
+            _hover={{ background: "rgb(172, 32, 95)" }}
+          >
+            <Image w={"24px"} h={"24px"} src={basket} />
+          </Button>
+        </Box>
+    </GridItem>
+  ))}
+</Grid>
+</>
+
+}
       </Container>
     </Box>
   );

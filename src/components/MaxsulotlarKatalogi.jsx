@@ -8,18 +8,18 @@ export const  MaxsulotlarKatalogi = () => {
 
 
     const katalog = [
-        {title:'Smartfonlar'},
-        {title:'TV, audio va video'},
-        {title:'Maishiy texnika'},
-        {title:'Go`zallik va so`glik'},
-        {title:'Noutbuklar va kompyuterlar'},
-        {title:'Gadjetlar va aksessuarlar'},
-        {title:'Avto zona'},
-        {title:'Sport uchun buyumlar'},
-        {title:'Ofis va uy uchun mebel'},
-        {title:'Bolalar uchun tovarlar'},
-        {title:'Ta`mirlash uchun asboblar'},
-        {title:'Video kuzatuv tizimlari'},
+        {title:'Smartfonlar',id:1},
+        {title:'TV, audio va video',id:2},
+        {title:'Maishiy texnika',id:3},
+        {title:'Go`zallik va so`glik',id:4},
+        {title:'Noutbuklar va kompyuterlar',id:5},
+        {title:'Gadjetlar va aksessuarlar',id:6},
+        {title:'Avto zona',id:7},
+        {title:'Sport uchun buyumlar',id:8},
+        {title:'Ofis va uy uchun mebel',id:9},
+        {title:'Bolalar uchun tovarlar',id:10},
+        {title:'Ta`mirlash uchun asboblar',id:11},
+        {title:'Video kuzatuv tizimlari',id:12},
 
       ]
   
@@ -46,14 +46,14 @@ export const  MaxsulotlarKatalogi = () => {
                 <Box padding={'20px'}gap={'20px'} h={'auto'}display={'flex'}flexDirection={'column'}alignItems={'center'} width={'50%'}>
                   {
                     katalog.slice(0,6).map((item)=>(
-                      <Heading cursor={'pointer'}  mb={'9px'}_hover={{color:'#DD1470',borderBottom:'2px solid #DD1470'}}transition={'0.3s'} textAlign={'center'} w={'350px'}fontSize={'18px'}fontWeight={'400'} borderBottom={'2px solid #f2f2f2'}>{item.title}</Heading>
+                      <Heading key={item.id} cursor={'pointer'}  mb={'9px'}_hover={{color:'#DD1470',borderBottom:'2px solid #DD1470'}}transition={'0.3s'} textAlign={'center'} w={'350px'}fontSize={'18px'}fontWeight={'400'} borderBottom={'2px solid #f2f2f2'}>{item.title}</Heading>
                     ))
                   }
                 </Box>
                 <Box padding={'20px'}gap={'20px'} h={'auto'}display={'flex'}flexDirection={'column'}alignItems={'center'} width={'50%'}>
                   {
                     katalog.slice(6,12).map((item)=>(
-                      <Heading cursor={'pointer'}  mb={'9px'}_hover={{color:'#DD1470',borderBottom:'2px solid #DD1470'}}transition={'0.3s'} textAlign={'center'} w={'350px'}fontSize={'18px'}fontWeight={'400'} borderBottom={'2px solid #f2f2f2'}>{item.title}</Heading>
+                      <Heading  key={item.id} cursor={'pointer'}  mb={'9px'}_hover={{color:'#DD1470',borderBottom:'2px solid #DD1470'}}transition={'0.3s'} textAlign={'center'} w={'350px'}fontSize={'18px'}fontWeight={'400'} borderBottom={'2px solid #f2f2f2'}>{item.title}</Heading>
                     ))
                   }
                 </Box>

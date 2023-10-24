@@ -16,7 +16,9 @@ import idea from "../assets/icon/Logo.svg";
 
 import { Link } from "react-router-dom";
 import {
+  AddIcon,
   AttachmentIcon,
+  LinkIcon,
   LockIcon,
   PhoneIcon,
   PlusSquareIcon,
@@ -31,6 +33,7 @@ import { ResponsiveHeader__search } from "./header/ResponsiveHeader__search";
 import { ModalContext } from "../context/ModalContext";
 import { Login } from "../components/kirish/Login";
 // import locationIcon from '../assets/icon/location.svg'
+import basket from "../assets/icon/basket.svg";
 
 export const Header = () => {
   const {openModal} = useContext(ModalContext)
@@ -101,23 +104,23 @@ export const Header = () => {
 
           <Box display={{base:'none',lg:'block'}} position={'relative'} textAlign={"center"}>
         <Link to={"/tanlanganlar"} >
-            <StarIcon fontSize={17} mb={1} />
-            <Text fontSize={18}>Tanlanganlar</Text>
-            <Text display={'flex'} justifyContent={'center'} alignItems={'center'} top={'-9px'} right={7} borderRadius={'50%'}  background={'yellow'}w={'20px'} h={'20px'} position={'absolute'}>{tanlanganlar.length}</Text>
+            <StarIcon fontSize={'20px'} mb={1} />
+            <Text _hover={{color:'#DD1470'}} fontSize={18}>Tanlanganlar</Text>
+            <Text  display={'flex'} justifyContent={'center'} alignItems={'center'} top={'-9px'} right={7} borderRadius={'50%'}  background={'yellow'}w={'20px'} h={'20px'} position={'absolute'}>{tanlanganlar.length}</Text>
         </Link>
           </Box>
           <Box display={{base:'none',lg:'block'}} position={'relative'} textAlign={"center"}>
         <Link to={"/savatcha"}>
-            <PlusSquareIcon fontSize={17} mb={1} />
-            <Text fontSize={18}>Savatcha</Text>
-            <Text display={'flex'} justifyContent={'center'} alignItems={'center'} top={'-9px'} right={3} borderRadius={'50%'}  background={'yellow'}w={'20px'} h={'20px'} position={'absolute'}>{basket.length}</Text>
+            <PlusSquareIcon fontSize={'20px'}  mb={1} />
+            <Text _hover={{color:'#DD1470'}} fontSize={18}>Savatcha</Text>
+            <Text  display={'flex'} justifyContent={'center'} alignItems={'center'} top={'-9px'} right={3} borderRadius={'50%'}  background={'yellow'}w={'20px'} h={'20px'} position={'absolute'}>{basket.length}</Text>
         </Link>
           </Box>
           <Box display={{base:'none',lg:'block'}} position={'relative'} textAlign={"center"}>
         <Link to={"/taqqoslash"}>
-            <QuestionOutlineIcon fontSize={17} mb={1} />
-            <Text fontSize={18}>Taqqoslash</Text>
-            <Text display={'flex'} justifyContent={'center'} alignItems={'center'} top={'-9px'} right={5} borderRadius={'50%'}  background={'yellow'}w={'20px'} h={'20px'} position={'absolute'}>{taqqoslash.length}</Text>
+            <LinkIcon fontSize={'20px'} mb={1} />
+            <Text _hover={{color:'#DD1470'}} fontSize={18}>Taqqoslash</Text>
+            <Text  display={'flex'} justifyContent={'center'} alignItems={'center'} top={'-9px'} right={5} borderRadius={'50%'}  background={'yellow'}w={'20px'} h={'20px'} position={'absolute'}>{taqqoslash.length}</Text>
         </Link>
           </Box>
         </Box>
