@@ -1,0 +1,70 @@
+.swiper {
+  width: 778px;
+  height: 395px;
+  border-radius: 10px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 395px;
+  border-radius: 10px;
+}
+.от {
+  font-size: 14px;
+  color: #000000;
+  padding-right: 1px;
+}
+.first-product {
+  width: 100%;
+  overflow: hidden;
+  overflow: scroll;
+}
+.first-product::-webkit-scrollbar {
+  display: none;
+}
+.boshlandi-content {
+  height: 312px;
+  overflow: hidden;
+  overflow: scroll;
+}
+.boshlandi-content::-webkit-scrollbar {
+  display: none;
+}
+.savat__icons {
+  transition: all 0.3s ease;
+}
+.savatga-otish{
+  width: 100%;
+  background-color: #DD1470
+}
+.bosh-sahifaga-otish__btn{
+  background-color: #DD1470;
+  margin-top: 20px;
+  color: #fff;
+  transition: 0.3s;
+  padding: 14px 36px;
+  border-radius: 10px;
+}
+.bosh-sahifaga-otish__btn:hover{
+  background-color: rgb(172, 32, 95);
+}
+.locations{
+  height: 370px;
+  overflow: hidden;
+  overflow: scroll;
+}
+.locations::-webkit-scrollbar {
+  display: none;
+}
