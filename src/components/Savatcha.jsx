@@ -111,6 +111,8 @@ export const Savatcha = () => {
                 justifyContent={"space-between"}
               >
                 <Box
+                border={'1px solid red'}
+                  w={'100%'}
                   display={"flex"}
                   alignItems={{ base: "start", md: "center" }}
                 >
@@ -156,7 +158,7 @@ export const Savatcha = () => {
                   <Box display={"flex"} gap={"10px"} alignItems={"center"}>
                     <Button w={"30px"}h={"40px"}onClick={Minus}border={"1px solid transparent"}_hover={{ color: "#DD1470", border: "1px solid #DD1470" }}transition={"0.3s"}>-</Button>
                     <Text>{lengthItemPrice}</Text>
-                    <Button w={"30px"}h={"40px"}onClick={() => setLengthItemPrice(lengthItemPrice + 1)}border={"1px solid transparent"}_hover={{ color: "#DD1470", border: "1px solid #DD1470" }}transition={"0.3s"}>+</Button>
+                    <Text alignItems={'center'}textAlign={'center'}background={'#f2f3f5'} w={"20px"}h={"20px"} borderRadius={'50%'} fontSize={'12px'} onClick={() => setLengthItemPrice(lengthItemPrice + 1)}border={"1px solid transparent"}_hover={{ color: "#DD1470", border: "1px solid #DD1470" }}transition={"0.3s"}>+</Text>
                   </Box>
                 </Box>
               </Box>

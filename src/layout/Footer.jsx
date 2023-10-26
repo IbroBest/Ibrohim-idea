@@ -6,7 +6,7 @@ import instagram from '../assets/icon/instagram.svg'
 import fecebook from '../assets/icon/fecebook.svg'
 export const Footer = () => {
   return (
-    <Box  padding={'40px 0 40px 0 ' }  background={'#282F3C'}>
+    <Box  padding={'40px 0 40px 0 ' }  background={'#282F3C'} mb={{base:'100px',lg:'0px'}}>
       <Container display={'flex'} justifyContent={'space-between'} h={'auto'}    maxW={{ sm:'550px',md: "750px", lg: "1116px", xl: "1576px" }}>
           <Box pt={'50px'} display={{base:'none',lg:'block'}}>
             <Image w={'105px'}h={'43px'} src={WhiteLogo}/> 

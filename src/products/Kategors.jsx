@@ -19,7 +19,7 @@ export const Kategors = () => {
 
         <Box _hover={{background:'#0d6efd',}}transition={'0.3s'}  overflow={'hidden'} position={'relative'} bg={'#e8e8e8'}borderRadius={'14px'} p={'24px'} w={"380px"} h={"260px"}>
             <Heading fontSize={'20px'}>Smartfonlar</Heading>
-            <Image position={'absolute'}zIndex={1} right={{lg:'-92px',xl:'-108px'}}w={'300px'} top={{lg:'130px',xl:'91px'}} src={iphone}/>
+            <Image position={'absolute'}zIndex={1} right={{lg:'-95px',xl:'-110px'}}w={'300px'} top={{lg:'133px',xl:'94px'}} src={iphone}/>
         </Box>
 
         <Box _hover={{background:'#6f42c1'}}transition={'0.3s'} overflow={'hidden'} position={'relative'} bg={'#e8e8e8'}borderRadius={'14px'} p={'24px'} w={"380px"} h={"260px"}>

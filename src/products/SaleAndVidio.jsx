@@ -9,7 +9,7 @@ export const SaleAndVidio = () => {
   return (
       <Container  maxW={{ sm:'550px',md: "750px", lg: "1116px", xl: "1576px" }}>
         <Box py={6} display={"flex"} flexDirection={'column'}>
-          <Heading fontSize={'24px'}fontWeight={'600'}>Aksiyalar va video-lavhalar</Heading>
+          <Heading fontSize={{base:'20px',lg:'30px'}}fontWeight={'600'}>Aksiyalar va video-lavhalar</Heading>
           <Box display={'flex'}gap={4} py={5} >
         <Button p={'12px 24px'}fontSize={'16px'}fontWeight={'600'} _hover={{cursor:'pointer'}} bg={'#DD1470'} color={'white'}>Aksiyalar</Button>
         <Button p={'12px 24px'}fontSize={'16px'}fontWeight={'600'} border={'1px solid white'} bg={'#FFF'}_hover={{border:'1px solid #DD1470',color:'#dd1470'}}>Idea Content</Button>

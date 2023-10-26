@@ -21,10 +21,7 @@ export const router = createBrowserRouter([
         path:'/aksiya',
         element:<Aksiya/>
     },
-    {
-        path:'/registration',
-        element:<Kirish/>,
-    } ,  
+
     {
         path:'/manzillar',
         element:<Manzil/>
@@ -47,4 +44,8 @@ export const router = createBrowserRouter([
     } ,
 ]
 },
+{
+    path:'/registration',
+    element:<Kirish/>,
+} ,  
 ])

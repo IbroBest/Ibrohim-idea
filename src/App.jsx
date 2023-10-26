@@ -9,6 +9,7 @@ import { Context } from "./context/Context";
 import { SaleAndVidio } from "./products/SaleAndVidio";
 import { Kategors } from "./products/Kategors";
 import "./style/mainResponsive.css";
+import { BottomHeader } from "./layout/BottomHeader";
 
 const App = () => {
   const { data } = useContext(Context);
@@ -20,7 +21,7 @@ const App = () => {
           position={"absolute"}
           w={"100%"}
           h={"100%"}
-          top={{ base: "-10%", md: "-26%" }}
+          top={{ base: "-10%", md: "-23%" }}
           display={"flex"}
           justifyContent={"center"}
           alignItems={"center"}
@@ -40,6 +41,7 @@ const App = () => {
       <SaleAndVidio />
       <OshxonaUchun />
       <Kategors />
+      <BottomHeader/>
     </Box>
   );
 };

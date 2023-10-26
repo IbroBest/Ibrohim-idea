@@ -8,14 +8,14 @@ export const Navbar = () => {
 
     <Container p={3}  maxW={{md:'696px',lg:'1116px',xl:'1576px'}} display={'flex'} justifyContent={'space-between'}>
       <Box display={'flex'} gap={5} alignItems={'center'}>
-        <Text color={'white'} fontSize={16}>Biz haqimizda</Text>
-        <Text color={'white'} fontSize={16}>Muddatli to'lov</Text>
-        <Text color={'white'} fontSize={16}>Vakansiyalar</Text>
+        <Text color={'white'}cursor={'pointer'} fontSize={16}>Biz haqimizda</Text>
+        <Text color={'white'}cursor={'pointer'} fontSize={16}>Muddatli to'lov</Text>
+        <Text color={'white'}cursor={'pointer'} fontSize={16}>Vakansiyalar</Text>
       </Box>
       <Box display={'flex'} gap={5} alignItems={'center'}>
         <PhoneIcon color={'#dd1470'} />
-        <Text color={'white'} fontSize={16}> 71 230 77 99</Text>
-        <Text color={'white'} fontSize={16}>O'zbekcha    {'>'} </Text>
+        <Text color={'white'}cursor={'pointer'} fontSize={16}> 71 230 77 99</Text>
+        <Text color={'white'}cursor={'pointer'} fontSize={16}>O'zbekcha    {'>'} </Text>
       </Box>
     </Container>
     </Box>

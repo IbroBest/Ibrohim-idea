@@ -33,8 +33,8 @@ export const OshxonaUchun = () => {
   return (
     <Box background={"#f2f2f2"}>
       <Container   maxW={{ sm:'550px',md: "750px", lg: "1116px", xl: "1576px" }}>
-        <Heading  color={"#282F3C"} fontSize={28} fontWeight={"600"}>
-          Oshxona uchun kichik texnika
+      <Heading  color={"#282F3C"} fontSize={{base:'20px',lg:30}} fontWeight={"600"}>
+          Oshxona uchun
         </Heading>
         <Box w={"100%"}>
           <Grid  templateColumns={"repeat(20,1fr)"} className="first-product" gap={"15px"}>
