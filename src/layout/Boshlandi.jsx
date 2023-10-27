@@ -1,6 +1,7 @@
 import { Box, Container, Heading, Image, Text } from "@chakra-ui/react";
 import image from "../assets/image/image.png";
 import Carousel from "../components/carousel";
+import { Link } from "react-router-dom";
 export const Boshlandi = () => {
   return (
     <Box background={"#f2f2f2"}>
@@ -11,20 +12,10 @@ export const Boshlandi = () => {
       >
         <Box display={"flex"} gap={"20px"}>
           <Carousel />
-          <Image
-            display={{ base: "none", lg: "flex" }}
-            w={"380px"}
-            src={image}
-            borderRadius={15}
-          />
-          <Box
-            display={{ base: "none", xl: "block" }}
-            background={"#fff"}
-            borderRadius={15}
-            p={5}
-            w={"380px"}
-            h={"389px"}
-          >
+          <Link to={'/bolib-tolash'}>
+            <Image display={{ base: "none", lg: "flex" }}w={"380px"}src={image}borderRadius={15}/>
+          </Link>
+          <Box display={{ base: "none", xl: "block" }}background={"#fff"}borderRadius={15}p={5}w={"380px"}h={"389px"}>
             <Heading mb={5} fontSize={20}>
               Odamlar koʻpincha qidirishadi
             </Heading>

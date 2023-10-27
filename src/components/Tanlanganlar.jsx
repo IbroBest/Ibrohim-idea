@@ -32,7 +32,7 @@ export const Tanlanganlar = () => {
   return (
     <Box background={"#f2f3f5"}>
       
-      <Container pb={10} maxW={{ sm:'550px',md: "750px", lg: "1116px", xl: "1576px",'2xl':'1342px' }}>
+      <Container pb={10} maxW={{ sm:'550px',md: "750px", lg: "1116px", xl: "1576px",'2xl':'1576px' }}>
       <Box py={5} alignItems={"center"} display={"flex"}>
             <Link to={"/"} style={{ fontSize: "16px" }}>
               Bosh sahifa
@@ -169,103 +169,6 @@ export const Tanlanganlar = () => {
 
           {/* /////////         tanlanganlarni pasi         ///////// */}
 
-
-          {
-!data.length &&
-          <Box display={'flex'}justifyContent={'space-between'}>
-          <Heading fontSize={{base:'14px',sm:'24px'}}>Siz uchun maxsus</Heading>
-          <Heading alignItems={'center'}fontWeight={'500'} fontSize={{base:'10px',sm:'16px'}} color={'#DD1470'}>Hammasini Ko'rish <ArrowForwardIcon/></Heading>
-          </Box>
-}
-
-{!data.length &&
-  <Grid 
-  templateColumns={"repeat(20,1fr)"}
-  className="first-product"
-  gap={'15px'}
-  flexDirection={'column'}
->
- 
-  {data.map((item) => (
-    <GridItem
-      my={"30px"}
-      key={item.id}
-      h={"auto"}
-      background={"#fff"}
-      borderRadius={"12px"}
-      p={"16px"}
-      w={{base:"208px",lg:'244px'}}
-    >
-        <Box display={"flex"} justifyContent={"space-between"}>
-          <Image onClick={() => AddTaqqoslash(item)} src={toj} />
-          <StarIcon _hover={{color:'#DD1470'}}transition={'0.3s'} onClick={() => AddTanlanganlar(item)}w={"24px"}h={"24px"}/>
-        </Box>
-      <Link to={`/product/${item.id}`}>
-        <Image
-          py={"8px"}
-          w={"100%"}
-          h={"200px"}
-          objectFit={"cover"}
-          src={item.img}
-        />
-
-        <HStack>
-          <Image src={star} />{" "}
-          <Heading fontSize={"13px"} mt={"7px"}>
-            (5.0) 0 отзывов{" "}
-          </Heading>
-        </HStack>
-        <Heading mt={"5px"} fontSize={"19px"} color={"#DD1470"}>
-          {item.current_price_formatted}
-        </Heading>
-        <Heading
-          mt={"7px"}
-          fontSize={"14px"}
-          color={"#282F3C"}
-          fontWeight={"400"}
-        >
-          {item.title_name}
-        </Heading>
-        <Heading mt={"4px"} fontSize={"15px"}>
-          <span style={{ color: "#C0C0C0" }}>Бренд:  </span>
-          {item.brand_name}
-        </Heading>
-        </Link>
-        <Box
-          mt={"5px"}
-          display={"flex"}
-          alignItems={"center"}
-          gap={"8px"}
-          >
-         
-          <Button
-            className="savat__icons"
-            _hover={{
-              border: "1px solid #DD1470 ",
-              color: "#DD1470",
-            }}
-            transition={"0.3s ease"}
-            fontSize={"14px"}
-            h={"48px"}
-            border={"1px solid #F2F2F2"}
-            >
-            Hozirni oʻzidayoq <br /> xarid qilish
-          </Button>
-          <Button
-            h={"48px"}
-            p={"12px"}
-            background={"#DD1470"}
-            borderRadius={"9px"}
-            onClick={() => SubmitData(item)}
-            _hover={{ background: "rgb(172, 32, 95)" }}
-          >
-            <Image w={"24px"} h={"24px"} src={basket} />
-          </Button>
-        </Box>
-    </GridItem>
-  ))}
-</Grid>
-}
 
       </Container>
     </Box>

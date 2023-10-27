@@ -1,12 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { createContext } from "react";
 
 export const Context = createContext(null);
 
 export const ContextProvider = ({ children }) => {
-  const [taqqoslash , setTaqqoslash] = useState([])
-  const [tanlanganlar ,setTanlanganlar] = useState([])
-  const [basket , setBasket] = useState([])
+  let basketStorage  = localStorage.getItem('basket__product')
+  let tanlanganStoage = localStorage.getItem('tanlangan__product')
+  let taqqoshlashStoage = localStorage.getItem('taqqoslash__product')
+
+  const [basket , setBasket] = useState(JSON.parse(basketStorage)|| [])
+  const [taqqoslash , setTaqqoslash] = useState(JSON.parse(taqqoshlashStoage) || [])
+  const [tanlanganlar ,setTanlanganlar] = useState(JSON.parse(tanlanganStoage) || [])
   const [data, setData] = useState([]);
   const [DynamicItem,setDynamicItem] = useState([])
   const AllTanlanganlar = (product)=>{
@@ -14,11 +18,24 @@ export const ContextProvider = ({ children }) => {
   }
     const allBasket = (product)=>{
       setBasket([...basket,product])
-  }
+    }
+
   const AllTaqooslangan = (product)=>{
     setTaqqoslash([...taqqoslash,product])
   }
 
+
+  useEffect(()=>{
+    localStorage.setItem('basket__product',JSON.stringify(basket))
+  },[basket])
+
+  useEffect(()=>{
+    localStorage.setItem('tanlangan__product',JSON.stringify(tanlanganlar))
+  },[tanlanganlar])
+
+  useEffect(()=>{
+    localStorage.setItem('taqqoslash__product',JSON.stringify(taqqoslash))
+  },[taqqoslash])
     
   return <Context.Provider value={{DynamicItem,setDynamicItem,setData,data,allBasket,setBasket,basket,AllTanlanganlar,tanlanganlar,setTanlanganlar,taqqoslash,setTaqqoslash,AllTaqooslangan,}}>{children}</Context.Provider>
 };

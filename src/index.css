@@ -68,3 +68,10 @@
 .locations::-webkit-scrollbar {
   display: none;
 }
+
+
+.taqqoslash__item{
+  width: 100%;
+  overflow: hidden;
+  overflow: scroll;
+}

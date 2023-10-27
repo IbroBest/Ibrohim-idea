@@ -8,6 +8,7 @@ import { Taqqoslash } from '../components/Taqqoslash'
 import { Layout } from '../layout/layout'
 import { Manzil } from '../components/Manzillar'
 import { Dynamic } from '../components/Dynamic'
+import { BolibTolash } from '../components/BolibTolash'
 
 export const router = createBrowserRouter([
     {
@@ -41,6 +42,10 @@ export const router = createBrowserRouter([
     {
         path:'/product/:id',
         element:<Dynamic/>
+    } ,
+    {
+        path:'/bolib-tolash',
+        element:<BolibTolash/>
     } ,
 ]
 },
