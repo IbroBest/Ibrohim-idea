@@ -15,7 +15,7 @@
 @media screen and (max-width:1280px) {
   .swiper{
     width: 100%;
-    height: 390px;
+    height: 490px;
   }
   .swiper-slide img {
     height: 100%;
@@ -31,14 +31,17 @@
 }
 @media screen and (max-width:992px) {
 .swiper{
-  width: 696px;
+  width: 718px;
 }
    
 }
 @media screen and (max-width:768px) {
+  .swiper{
+    height: 318px;
+  }
 
     
-  }
+}
   @media screen and (max-width:400px) {
 
     .swiper{

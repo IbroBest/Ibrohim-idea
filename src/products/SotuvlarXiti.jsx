@@ -57,7 +57,7 @@ export const SotuvlarXiti = () => {
               <GridItem
                 my={"30px"}
                 key={item.id}
-                h={"auto"}
+                h={{base:'350px',md:'auto'}}
                 background={"#fff"}
                 borderRadius={"12px"}
                 p={"16px"}
@@ -68,58 +68,60 @@ export const SotuvlarXiti = () => {
                     <StarIcon _hover={{color:'#DD1470'}}transition={'0.3s'} onClick={() => AddTanlanganlar(item)}w={"24px"}h={"24px"}/>
                   </Box>
                 <Link to={`/product/${item.id}`}>
+
                   <Image
-                    py={"8px"}
-                    w={"100%"}
-                    h={"200px"}
-                    objectFit={"cover"}
-                    src={item.img}
+                  pl={{base:'50px',md:'0px'}}
+                  alignItems={'center'}
+                  py={"8px"}
+                  w={{base:"120px",md:'100%'}}
+                  h={{base:'140px',md:'200px'}} 
+                  objectFit={"cover"}
+                  src={item.img}
                   />
 
-                  <HStack>
-                    <Image src={star} />{" "}
-                    <Heading fontSize={"13px"} mt={"7px"}>
+                  <HStack alignItems={'center'}>
+                    <StarIcon color={'yellow.300'} fontSize={{base:'8px',md:"13px"}}/>
+                    <Heading fontSize={{base:'8px',md:"13px"}}>
                       (5.0) 0 отзывов{" "}
                     </Heading>
                   </HStack>
-                  <Heading mt={"5px"} fontSize={"19px"} color={"#DD1470"}>
+                  <Heading mt={"5px"} fontSize={{base:'15px',md:"19px"}} color={"#DD1470"}>
                     {item.current_price_formatted}
                   </Heading>
                   <Heading
                     mt={"7px"}
-                    fontSize={"14px"}
+                    fontSize={{base:'12px',md:"14px"}}
                     color={"#282F3C"}
                     fontWeight={"400"}
                   >
                     {item.title_name}
                   </Heading>
-                  <Heading mt={"4px"} fontSize={"15px"}>
+                  <Heading mt={"4px"} fontSize={{base:'12px',md:"16px"}}>
                     <span style={{ color: "#C0C0C0" }}>Бренд:  </span>
                     {item.brand_name}
                   </Heading>
                   </Link>
                   <Box
-                    mt={"5px"}
+                    mt={{base:'10px',md:"5px"}}
                     display={"flex"}
                     alignItems={"center"}
                     gap={"8px"}
                     >
                    
                     <Button
-                      className="savat__icons"
                       _hover={{
                         border: "1px solid #DD1470 ",
                         color: "#DD1470",
                       }}
-                      transition={"0.3s ease"}
-                      fontSize={"14px"}
-                      h={"48px"}
+                      transition={"0.4s"}
+                      fontSize={{base:'10px',md:"14px"}}
+                      h={{base:'40px',md:"48px"}}
                       border={"1px solid #F2F2F2"}
                       >
                       Hozirni oʻzidayoq <br /> xarid qilish
                     </Button>
                     <Button
-                      h={"48px"}
+                       h={{base:'40px',md:"48px"}}  
                       p={"12px"}
                       background={"#DD1470"}
                       borderRadius={"9px"}

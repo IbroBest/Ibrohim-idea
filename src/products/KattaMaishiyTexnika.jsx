@@ -16,6 +16,7 @@ import { StarIcon } from "@chakra-ui/icons";
 import star from "../assets/icon/star.svg";
 import basket from "../assets/icon/basket.svg";
 import { Context } from "../context/Context";
+import { Link } from "react-router-dom";
 
 export const MaishiyTexnika = () => {
   const { data, allBasket, AllTanlanganlar } = useContext(Context);
@@ -38,77 +39,84 @@ export const MaishiyTexnika = () => {
         </Heading>
         <Box w={"100%"}>
           <Grid  templateColumns={"repeat(20,1fr)"} className="first-product" gap={"15px"}>
-            {data.map((item) => (
+          {data.map((item) => (
               <GridItem
                 my={"30px"}
                 key={item.id}
-                h={"auto"}
+                h={{base:'350px',md:'auto'}}
                 background={"#fff"}
                 borderRadius={"12px"}
                 p={"16px"}
                 w={{base:"208px",lg:'244px'}}
               >
-                <Box display={"flex"} justifyContent={"space-between"}>
-                  <Image src={toj} />
-                  <StarIcon
-                  _hover={{color:'#DD1470'}}transition={'0.3s'} 
-                    onClick={() => AddTanlanganlar(item)}
-                    w={"24px"}
-                    h={"24px"}
-                  />
-                </Box>
-                <Image
+                  <Box display={"flex"} justifyContent={"space-between"}>
+                    <Image onClick={() => AddTaqqoslash(item)} src={toj} />
+                    <StarIcon _hover={{color:'#DD1470'}}transition={'0.3s'} onClick={() => AddTanlanganlar(item)}w={"24px"}h={"24px"}/>
+                  </Box>
+                <Link to={`/product/${item.id}`}>
+
+                  <Image
+                  pl={{base:'50px',md:'0px'}}
+                  alignItems={'center'}
                   py={"8px"}
-                  w={"100%"}
-                  h={"200px"}
+                  w={{base:"120px",md:'100%'}}
+                  h={{base:'140px',md:'200px'}} 
                   objectFit={"cover"}
                   src={item.img}
-                />
+                  />
 
-                <HStack>
-                  <Image src={star} />{" "}
-                  <Heading fontSize={"13px"} mt={"7px"}>
-                    (5.0) 0 отзывов{" "}
+                  <HStack alignItems={'center'}>
+                    <StarIcon color={'yellow.300'} fontSize={{base:'8px',md:"13px"}}/>
+                    <Heading fontSize={{base:'8px',md:"13px"}}>
+                      (5.0) 0 отзывов{" "}
+                    </Heading>
+                  </HStack>
+                  <Heading mt={"5px"} fontSize={{base:'15px',md:"19px"}} color={"#DD1470"}>
+                    {item.current_price_formatted}
                   </Heading>
-                </HStack>
-                <Heading mt={"5px"} fontSize={"19px"} color={"#DD1470"}>
-                  {item.current_price_formatted}
-                </Heading>
-                <Heading
-                  mt={"7px"}
-                  fontSize={"14px"}
-                  color={"#282F3C"}
-                  fontWeight={"400"}
-                >
-                  {item.title_name}
-                </Heading>
-                <Heading mt={"4px"} fontSize={"15px"}>
-                  <span style={{ color: "#C0C0C0" }}>Бренд:  </span>
-                  {item.brand_name}
-                </Heading>
-                <Box mt={'5px'} display={"flex"} alignItems={"center"} gap={'8px'}>
-                  <Button
-                    className="savat__icons"
-                    _hover={{ border: "1px solid #DD1470 ", color: "#DD1470" }}
-                    transition={"0.3s ease"}
-                    fontSize={'14px'}
-                    h={'48px'}
-                    border={'1px solid #F2F2F2'}
+                  <Heading
+                    mt={"7px"}
+                    fontSize={{base:'12px',md:"14px"}}
+                    color={"#282F3C"}
+                    fontWeight={"400"}
                   >
-                    Hozirni oʻzidayoq <br /> xarid qilish
-                  </Button>
-                  <Button
-                    h={'48px'}
-                    p={'12px'}
-                    background={"#DD1470"}
-                    borderRadius={"9px"}
-                    onClick={() => SubmitData(item)}
-                    _hover={{ background: "rgb(172, 32, 95)" }}
-                  >
-                    <Image w={"24px"} h={"24px"} src={basket} />
-                  </Button>
-                </Box>
-
+                    {item.title_name}
+                  </Heading>
+                  <Heading mt={"4px"} fontSize={{base:'12px',md:"16px"}}>
+                    <span style={{ color: "#C0C0C0" }}>Бренд:  </span>
+                    {item.brand_name}
+                  </Heading>
+                  </Link>
+                  <Box
+                    mt={{base:'10px',md:"5px"}}
+                    display={"flex"}
+                    alignItems={"center"}
+                    gap={"8px"}
+                    >
+                   
+                    <Button
+                      _hover={{
+                        border: "1px solid #DD1470 ",
+                        color: "#DD1470",
+                      }}
+                      transition={"0.4s"}
+                      fontSize={{base:'10px',md:"14px"}}
+                      h={{base:'40px',md:"48px"}}
+                      border={"1px solid #F2F2F2"}
+                      >
+                      Hozirni oʻzidayoq <br /> xarid qilish
+                    </Button>
+                    <Button
+                       h={{base:'40px',md:"48px"}}  
+                      p={"12px"}
+                      background={"#DD1470"}
+                      borderRadius={"9px"}
+                      onClick={() => SubmitData(item)}
+                      _hover={{ background: "rgb(172, 32, 95)" }}
+                    >
+                      <Image w={"24px"} h={"24px"} src={basket} />
+                    </Button>
+                  </Box>
               </GridItem>
             ))}
           </Grid>

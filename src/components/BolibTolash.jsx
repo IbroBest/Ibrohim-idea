@@ -1,4 +1,4 @@
-import { Box, Container, Heading, Text } from "@chakra-ui/react";
+import { Box, Container,  HStack,  Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -53,6 +53,9 @@ export const BolibTolash = () => {
           </Text>
         </Box>
       </Container>
+      <HStack>
+
+      </HStack>
     </Box>
   );
 };

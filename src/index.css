@@ -42,9 +42,7 @@
 .boshlandi-content::-webkit-scrollbar {
   display: none;
 }
-.savat__icons {
-  transition: all 0.3s ease;
-}
+
 .savatga-otish {
   width: 100%;
   background-color: #dd1470;

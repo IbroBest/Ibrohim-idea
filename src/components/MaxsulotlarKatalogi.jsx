@@ -46,14 +46,14 @@ export const  MaxsulotlarKatalogi = () => {
                 <Box padding={'20px'}gap={'20px'} h={'auto'}display={'flex'}flexDirection={'column'}alignItems={'center'} width={'50%'}>
                   {
                     katalog.slice(0,6).map((item)=>(
-                      <Heading key={item.id} cursor={'pointer'}  mb={'9px'}_hover={{color:'#DD1470',borderBottom:'2px solid #DD1470'}}transition={'0.3s'} textAlign={'center'} w={'350px'}fontSize={'18px'}fontWeight={'400'} borderBottom={'2px solid #f2f2f2'}>{item.title}</Heading>
+                      <Heading key={item.id} cursor={'pointer'}  mb={'9px'}_hover={{color:'#DD1470',borderBottom:'2px solid #DD1470'}}transition={'0.4s'} textAlign={'center'} w={'350px'}fontSize={'18px'}fontWeight={'400'} borderBottom={'2px solid #f2f2f2'}>{item.title}</Heading>
                     ))
                   }
                 </Box>
                 <Box padding={'20px'}gap={'20px'} h={'auto'}display={'flex'}flexDirection={'column'}alignItems={'center'} width={'50%'}>
                   {
                     katalog.slice(6,12).map((item)=>(
-                      <Heading  key={item.id} cursor={'pointer'}  mb={'9px'}_hover={{color:'#DD1470',borderBottom:'2px solid #DD1470'}}transition={'0.3s'} textAlign={'center'} w={'350px'}fontSize={'18px'}fontWeight={'400'} borderBottom={'2px solid #f2f2f2'}>{item.title}</Heading>
+                      <Heading  key={item.id} cursor={'pointer'}  mb={'9px'}_hover={{color:'#DD1470',borderBottom:'2px solid #DD1470'}}transition={'0.4s'} textAlign={'center'} w={'350px'}fontSize={'18px'}fontWeight={'400'} borderBottom={'2px solid #f2f2f2'}>{item.title}</Heading>
                     ))
                   }
                 </Box>

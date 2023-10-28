@@ -10,10 +10,10 @@ export const Boshlandi = () => {
         maxW={{ sm:'550px',md: "750px", lg: "1116px", xl: "1576px" }}
         mt={10}
       >
-        <Box display={"flex"} gap={"20px"}>
+        <Box display={"flex"} gap={{base:'0',xl:'20px'}}>
           <Carousel />
           <Link to={'/bolib-tolash'}>
-            <Image display={{ base: "none", lg: "flex" }}w={"380px"}src={image}borderRadius={15}/>
+            <Image display={{ base: "none", xl: "flex" }}w={"380px"}h={'396px'} src={image}borderRadius={15}/>
           </Link>
           <Box display={{ base: "none", xl: "block" }}background={"#fff"}borderRadius={15}p={5}w={"380px"}h={"389px"}>
             <Heading mb={5} fontSize={20}>
