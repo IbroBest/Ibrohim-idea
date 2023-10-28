@@ -22,7 +22,7 @@ import axios from "axios";
 
 export const Register = () => {
   const { closeParModal, parOpen, closeAllModal } = useContext(ModalContext);
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState("" );
   const [password, setPassword] = useState("");
   const [show,setShow] = useState(false)
   const handleShow = ()=>{
@@ -32,7 +32,8 @@ export const Register = () => {
 
   async function register(){
       try {
-       await axios.post('http://localhost:5000/auth/register',{
+       await axios
+        .post('http://localhost:5000/auth/register',{
           username:username,
           password:password
         }).then((res)=>console.log(res.data))

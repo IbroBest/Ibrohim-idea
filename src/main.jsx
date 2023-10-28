@@ -8,11 +8,11 @@ import { ContextProvider } from "./context/Context.jsx";
 import { ModalProvider } from "./context/ModalContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <ChakraProvider>
-    <ModalProvider>
-      <ContextProvider>
+  <ContextProvider>
+    <ChakraProvider>
+      <ModalProvider>
         <RouterProvider router={router} />
-      </ContextProvider>
-    </ModalProvider>
-  </ChakraProvider>
+      </ModalProvider>
+    </ChakraProvider>
+  </ContextProvider>
 );

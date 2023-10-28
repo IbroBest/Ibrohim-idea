@@ -13,6 +13,7 @@ export const ContextProvider = ({ children }) => {
   const [tanlanganlar ,setTanlanganlar] = useState(JSON.parse(tanlanganStoage) || [])
   const [data, setData] = useState([]);
   const [DynamicItem,setDynamicItem] = useState([])
+  const [attributes,setAtributes] = useState([])
   const AllTanlanganlar = (product)=>{
     setTanlanganlar([...tanlanganlar,product])
   }
@@ -37,5 +38,5 @@ export const ContextProvider = ({ children }) => {
     localStorage.setItem('taqqoslash__product',JSON.stringify(taqqoslash))
   },[taqqoslash])
     
-  return <Context.Provider value={{DynamicItem,setDynamicItem,setData,data,allBasket,setBasket,basket,AllTanlanganlar,tanlanganlar,setTanlanganlar,taqqoslash,setTaqqoslash,AllTaqooslangan,}}>{children}</Context.Provider>
+  return <Context.Provider value={{attributes,setAtributes,DynamicItem,setDynamicItem,setData,data,allBasket,setBasket,basket,AllTanlanganlar,tanlanganlar,setTanlanganlar,taqqoslash,setTaqqoslash,AllTaqooslangan,}}>{children}</Context.Provider>
 };
