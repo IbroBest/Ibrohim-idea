@@ -1,12 +1,10 @@
 import React, { useContext } from "react";
 import { Context } from "../context/Context";
 import { Box, Button, Container, Grid, GridItem, HStack, Heading, Image, Text, background } from "@chakra-ui/react";
-import { ArrowForwardIcon, DeleteIcon, LinkIcon, StarIcon } from "@chakra-ui/icons";
+import { ArrowForwardIcon, DeleteIcon, LinkIcon, PlusSquareIcon, StarIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 import tanlanganlarLogo from "../assets/image/tanlanganlarLogo.png";
-import toj from "../assets/icon/toj.svg";
-import basket from "../assets/icon/basket.svg";
-import star from "../assets/icon/star.svg";
+
 
 
 export const Tanlanganlar = () => {
@@ -21,9 +19,6 @@ export const Tanlanganlar = () => {
   }
   const AddTaqqoslash = (item) => {
     AllTaqooslangan(item);
-  };
-  const AddTanlanganlar = (item) => {
-    AllTanlanganlar(item);
   };
   const SubmitData = (item) => {
     allBasket(item);
@@ -70,51 +65,20 @@ export const Tanlanganlar = () => {
         <Box display={'flex'} flexDirection={'column'}>
 
           {tanlanganlar.map((item) => (
-              <Box
-              key={item.id}
-              mb={'10px'}
-              p={'24px'}
-              h={'174px'}
-              w={{lg:'670px',xl:'932px','2xl':'1000px'}}
-              borderRadius={'10px'}
-              display={"flex"}
-              justifyContent={"space-between"}
-              alignItems={"center"}
-              background={"#fff"}
-              gap={0}
-              flexDirection={{base:'column',md:'row'}}
-              >
+              <Box key={item.id}mb={'10px'}p={'24px'}h={'174px'}w={{lg:'670px',xl:'932px','2xl':'1000px'}}borderRadius={'10px'}display={"flex"}justifyContent={"space-between"}alignItems={"center"}background={"#fff"}gap={0}flexDirection={{base:'column',md:'row'}}>
               <Box display={"flex"}w={'100%'} alignItems={{base:'start',md:"center"}}>
                 <Image w={"120px"} h={"120px"} src={item.img} />
                 <Box display={"flex"} flexDirection={"column"}>
                   <Box display={"flex"} gap={3}>
-                    <Text
-                      color={"#282f3c"}
-                      fontSize={{base:'13px',md:"18px"}}
-                      fontWeight={"800"}
-                    >
+                    <Text color={"#282f3c"}fontSize={{base:'13px',md:"18px"}}fontWeight={"800"}>
                       {item.current_price_formatted}
                     </Text>
-                    <Heading
-                    display={{base:"none",md:'flex'}}
-                      p={"5px 8px"}
-                      color={"white"}
-                      borderRadius={"100px"}
-                      fontSize={{base:'13px',md:"18px"}}
-                      background={"#DD1470"}
-                    >
+                    <Heading display={{base:"none",md:'flex'}}p={"5px 8px"}color={"white"}borderRadius={"100px"}fontSize={{base:'13px',md:"18px"}}background={"#DD1470"}>
                       Toliq tolov{">"}
                     </Heading>
                   </Box>
                   <Box display={"flex"} gap={"7px"}>
-                    <Text
-                      pt={1.2}
-                      color={"#282f3c"}
-                      w={{base:'130px',md:'80%'}}
-                      fontSize={{base:'10px',md:"18px"}}
-                      fontWeight={"500"}
-                      _hover={{ color: "#DD1470" }}
-                    >
+                    <Text pt={1.2}color={"#282f3c"}w={{base:'130px',md:'80%'}}fontSize={{base:'10px',md:"18px"}}fontWeight={"500"}_hover={{ color: "#DD1470" }}>
                       {item.slug}
                     </Text>
                   </Box>
@@ -122,29 +86,9 @@ export const Tanlanganlar = () => {
                 </Box>
               </Box>
               <Box display={"flex"}w={{base:'100%',md:'auto'}} pl={{base:'20px',md:'0px'}} alignItems={{base:'start',md:"center"}} gap={7} pr={7}>
-                <DeleteIcon
-                 fontSize={{base:'20px',md:"30px"}}
-                  onClick={() => DeleteData(item.id)}
-                  _hover={{ color: "#DD1470" }}
-                  className="savat__icons"
-                  color={"rgb(148, 153, 165)"}
-
-                />
-                <StarIcon
-                 fontSize={{base:'20px',md:"30px"}}
-                // onClick={}
-                  _hover={{ color: "#DD1470" }}
-                  className="savat__icons"
-                  color={"rgb(148, 153, 165)"}
-
-                />
-                <LinkIcon
-                 fontSize={{base:'20px',md:"30px"}}
-                  _hover={{ color: "#DD1470" }}
-                  className="savat__icons"
-                  color={"rgb(148, 153, 165)"}
-
-                />
+                <DeleteIcon transition={'0.3s'}fontSize={{base:'20px',md:"30px"}}onClick={() => DeleteData(item.id)}_hover={{ color: "#DD1470" }}className="savat__icons"color={"rgb(148, 153, 165)"}/>
+                <PlusSquareIcon transition={'0.3s'}fontSize={{base:'20px',md:"30px"}}onClick={()=>SubmitData(itme)}_hover={{ color: "#DD1470" }}className="savat__icons"color={"rgb(148, 153, 165)"}/>
+                <LinkIcon transition={'0.3s'}fontSize={{base:'20px',md:"30px"}}_hover={{ color: "#DD1470" }}className="savat__icons"color={"rgb(148, 153, 165)"}/>
               </Box>
             </Box>
           ))}
@@ -164,12 +108,6 @@ export const Tanlanganlar = () => {
           </Box>
           }
         </Box>
-
-
-
-          {/* /////////         tanlanganlarni pasi         ///////// */}
-
-
       </Container>
     </Box>
   );

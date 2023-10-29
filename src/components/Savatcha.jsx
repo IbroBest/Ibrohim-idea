@@ -67,7 +67,7 @@ export const Savatcha = () => {
             Bosh sahifa   
           </Link>
           <Heading color={"#DD1470"} fontWeight={"400"} fontSize={"16px"}>
-            {">"}   savatcha
+            {"  >  "}savatcha
           </Heading>
         </Box>
 

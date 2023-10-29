@@ -23,7 +23,7 @@ export const Taqqoslash = () => {
             Bosh sahifa   
           </Link>
           <Heading color={"#DD1470"} fontWeight={"400"} fontSize={"16px"}>
-            {">"}   savatcha
+            {"  >  "}Taqqoslash
           </Heading>
         </Box>
         {taqqoslash.length === 0 && (
