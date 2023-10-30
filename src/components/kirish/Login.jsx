@@ -18,7 +18,7 @@ export const Login = () => {
   return (
     <Box>
       <Modal  isOpen={open} OnClose={closeModal}>
-          <ModalOverlay/>
+          {/* <ModalOverlay/> */}
           <ModalContent>
             <ModalCloseButton onClick={closeModal}/>
             <ModalBody justifyContent={'center'}>
