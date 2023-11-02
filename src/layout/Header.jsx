@@ -6,9 +6,10 @@ import {
   Input,
   InputGroup,
   Text,
+  Button,
 
 } from "@chakra-ui/react";
-import { React , useContext } from "react";
+import { React , useContext, useEffect, useState } from "react";
 import instagram from '../assets/icon/instagram.svg'
 import telegram from '../assets/icon/telegram.svg'
 import fecebook from '../assets/icon/fecebook.svg'
@@ -16,13 +17,11 @@ import idea from "../assets/icon/Logo.svg";
 
 import { Link } from "react-router-dom";
 import {
-  AddIcon,
   AttachmentIcon,
   LinkIcon,
   LockIcon,
   PhoneIcon,
   PlusSquareIcon,
-  QuestionOutlineIcon,
   SearchIcon,
   StarIcon,
   TimeIcon,
@@ -32,27 +31,18 @@ import { MaxsulotlarKatalogi } from "../components/MaxsulotlarKatalogi";
 import { ResponsiveHeader__search } from "./header/ResponsiveHeader__search";
 import { ModalContext } from "../context/ModalContext";
 import { Login } from "../components/kirish/Login";
-// import locationIcon from '../assets/icon/location.svg'
-import basket from "../assets/icon/basket.svg";
-import axios from "axios";
 
 export const Header = () => {
+  const [linkValue,setLinkValue] =useState('')
   const {openModal} = useContext(ModalContext)
-  const {basket,tanlanganlar,taqqoslash,setInputValue,inputValue} = useContext(Context)
+  const {searchData,basket,tanlanganlar,taqqoslash,inputValue,setInputValue} = useContext(Context)
 
-
-  const searchData = (async = ()=>{
-    try {
-      axios.get()
-    } catch (error) {
-      
-    }
-  })
 
 
   const search = ()=>{
-
+    searchData()
   }
+
   return (
     <Box>
     <Box background={{base:'#f2f3f5',lg:"#fff"}}>
@@ -109,9 +99,13 @@ export const Header = () => {
         <MaxsulotlarKatalogi/>
         
           <InputGroup alignItems={'center'} w={'55%'}>
-          <InputRightElement  h={'100%'} _hover={{cursor:'pointer'}} alignItems={'center'} >
-          <SearchIcon onClick={search}/>
-          </InputRightElement>
+            <Link to={`/search-product`}>
+              <InputRightElement  h={'100%'} _hover={{cursor:'pointer'}} alignItems={'center'} >
+                <Button _hover={{background:'#d5dfdf'}}  onClick={search}>
+                  <SearchIcon h={'100%'}/>
+                </Button>
+              </InputRightElement>
+            </Link>
             <Input onChange={(e)=>setInputValue(e.target.value)} h={'46px'} border={'none'} pl={5}background={'#f2f2f2'} placeholder="Maxsulot qidirish" />
           </InputGroup>
 
