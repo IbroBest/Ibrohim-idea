@@ -34,10 +34,25 @@ import { ModalContext } from "../context/ModalContext";
 import { Login } from "../components/kirish/Login";
 // import locationIcon from '../assets/icon/location.svg'
 import basket from "../assets/icon/basket.svg";
+import axios from "axios";
 
 export const Header = () => {
   const {openModal} = useContext(ModalContext)
-  const {basket,tanlanganlar,taqqoslash} = useContext(Context)
+  const {basket,tanlanganlar,taqqoslash,setInputValue,inputValue} = useContext(Context)
+
+
+  const searchData = (async = ()=>{
+    try {
+      axios.get()
+    } catch (error) {
+      
+    }
+  })
+
+
+  const search = ()=>{
+
+  }
   return (
     <Box>
     <Box background={{base:'#f2f3f5',lg:"#fff"}}>
@@ -93,11 +108,11 @@ export const Header = () => {
       <Box my={{base:'16px',lg:'none'}} justifyContent={'space-between'} gap={'10px'} alignItems={"center"} display={{base:'none',lg:'flex'}} >
         <MaxsulotlarKatalogi/>
         
-          <InputGroup w={'55%'}>
-          <InputRightElement alignItems={'center'} >
-          <SearchIcon />
+          <InputGroup alignItems={'center'} w={'55%'}>
+          <InputRightElement  h={'100%'} _hover={{cursor:'pointer'}} alignItems={'center'} >
+          <SearchIcon onClick={search}/>
           </InputRightElement>
-            <Input h={'46px'} border={'none'} pl={5}background={'#f2f2f2'} placeholder="Maxsulot qidirish" />
+            <Input onChange={(e)=>setInputValue(e.target.value)} h={'46px'} border={'none'} pl={5}background={'#f2f2f2'} placeholder="Maxsulot qidirish" />
           </InputGroup>
 
         <Box gap={6} display={'flex'}>

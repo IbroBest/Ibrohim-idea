@@ -150,11 +150,10 @@ export const Dynamic = () => {
             {/* chap tarafdagi rasmlar 👇 */}
             <VStack display={{ base: "none", lg: "block" }}py={"5px"}w={"105px"}h={"438px"}>
               <Box alignItems={"center"}w={"100%"}borderRadius={"10px"}p={"3px"}>
-                <Image src={DynamicItem.gallery} w={"75px"} h={"75px"} />
+                <Image src={DynamicItem.gallery} w={"75px"}  h={"75px"} />
+                <Image src={DynamicItem.gallery} w={"75px"}  h={"75px"} />
               </Box>
               <Box borderRadius={"10px"} p={"3px"} >
-                {/* <Image src={DynamicItem.gallery[0].original} w={"75px"} h={"75px"} /> */}
-                {/* <Image src={DynamicItem.gallery[1].original} w={"75px"} h={"75px"} /> */}
 
               </Box>
             </VStack>
@@ -181,7 +180,7 @@ export const Dynamic = () => {
               </HStack>
                 <VStack alignItems={'start'}>
                 {xarakter.map((item)=>(
-                      <li style={{fontSize:'15px'}}>{item.title}</li>
+                      <li key={item.id} style={{fontSize:'15px'}}>{item.title}</li>
                   ))}
                 </VStack>
             </Box>
@@ -205,12 +204,12 @@ export const Dynamic = () => {
 
             <VStack alignItems={'start'}>
                 {xarakter.slice(0,8).map((item)=>(
-                  <li style={{fontSize:'13px'}}>{item.title}</li>
+                  <li key={item.id} style={{fontSize:'13px'}}>{item.title}</li>
                   ))}
                 </VStack>
             <VStack alignItems={'start'}>
                 {xarakter.slice(8,16).map((item)=>(
-                  <li style={{fontSize:'13px'}}>{item.title}</li>
+                  <li key={item.id} style={{fontSize:'13px'}}>{item.title}</li>
                   ))}
             </VStack>
           </HStack>

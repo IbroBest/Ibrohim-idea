@@ -41,7 +41,6 @@ export const Savatcha = () => {
       setLengthItemPrice(lengthItemPrice - 1);
     }
   };
-
   const DeleteData = (id) => {
     let beforeDel = basket.filter((item) => item.id !== id);
     setBasket(beforeDel);
@@ -54,7 +53,7 @@ export const Savatcha = () => {
   };
   const SubmitData = (item) => {
     allBasket(item);
-  };
+  };  
 
   return (
     <Box background={"#f2f3f5"}>

@@ -87,8 +87,8 @@ export const Tanlanganlar = () => {
               </Box>
               <Box display={"flex"}w={{base:'100%',md:'auto'}} pl={{base:'20px',md:'0px'}} alignItems={{base:'start',md:"center"}} gap={7} pr={7}>
                 <DeleteIcon transition={'0.3s'}fontSize={{base:'20px',md:"30px"}}onClick={() => DeleteData(item.id)}_hover={{ color: "#DD1470" }}className="savat__icons"color={"rgb(148, 153, 165)"}/>
-                <PlusSquareIcon transition={'0.3s'}fontSize={{base:'20px',md:"30px"}}onClick={()=>SubmitData(itme)}_hover={{ color: "#DD1470" }}className="savat__icons"color={"rgb(148, 153, 165)"}/>
-                <LinkIcon transition={'0.3s'}fontSize={{base:'20px',md:"30px"}}_hover={{ color: "#DD1470" }}className="savat__icons"color={"rgb(148, 153, 165)"}/>
+                <PlusSquareIcon transition={'0.3s'}fontSize={{base:'20px',md:"30px"}}onClick={()=>SubmitData(item)}_hover={{ color: "#DD1470" }}className="savat__icons"color={"rgb(148, 153, 165)"}/>
+                <LinkIcon transition={'0.3s'}fontSize={{base:'20px',md:"30px"}}onClick={()=>AllTaqooslangan(item)}_hover={{ color: "#DD1470" }}className="savat__icons"color={"rgb(148, 153, 165)"}/>
               </Box>
             </Box>
           ))}

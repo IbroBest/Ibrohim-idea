@@ -24,7 +24,7 @@ export const ContextProvider = ({ children }) => {
   const AllTaqooslangan = (product)=>{
     setTaqqoslash([...taqqoslash,product])
   }
-
+  const [inputValue,setInputValue]= useState('')
 
   useEffect(()=>{
     localStorage.setItem('basket__product',JSON.stringify(basket))

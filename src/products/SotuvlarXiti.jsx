@@ -39,7 +39,7 @@ export const SotuvlarXiti = () => {
   const AddTaqqoslash = (item) => {
     AllTaqooslangan(item);
   };
-
+  
 
   return (
     <Box background={"#f2f2f2"}>
