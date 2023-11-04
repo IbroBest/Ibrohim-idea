@@ -9,7 +9,7 @@ import { Layout } from "../layout/layout";
 import { Manzil } from "../components/Manzillar";
 import { Dynamic } from "../components/Dynamic";
 import { BolibTolash } from "../components/BolibTolash";
-import { Searchproduct } from "../components/Searchproduct.jsx";
+import { Searchproduct } from "../components/Searchproduct";
 
 export const router = createBrowserRouter([
   {
