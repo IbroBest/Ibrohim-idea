@@ -1,22 +1,14 @@
-import {
-  Box,
-  Button,
-  Container,
-  Heading,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Button, Container, Heading, Text } from "@chakra-ui/react";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../context/Context";
 import { DeleteIcon, LinkIcon, PlusSquareIcon } from "@chakra-ui/icons";
 
 export const Searchproduct = () => {
-  const {inputValue} = useContext(Context);
+const { inputValue } = useContext(Context);
 
   return (
     <Box background={"#f2f3f5"}>
-      
-
       <Container
         pb={10}
         maxW={{ sm: "550px", md: "750px", lg: "1116px", xl: "1576px" }}
@@ -38,9 +30,27 @@ export const Searchproduct = () => {
         </Heading>
 
         {/* Main */}
-        <Box display={"flex"}justifyContent={{ base: "none", lg: "space-between" }}flexDirection={{ base: "column", lg: "row" }}gap={"40px"}mb={"50px"}>
+        <Box
+          display={"flex"}
+          justifyContent={{ base: "none", lg: "space-between" }}
+          flexDirection={{ base: "column", lg: "row" }}
+          gap={"40px"}
+          mb={"50px"}
+        >
           <Box display={"flex"} flexDirection={"column"}>
-            <Box mb={"10px"}p={"24px"}h={"174px"}w={{ lg: "670px", xl: "932px", "2xl": "1000px" }}borderRadius={"10px"}display={"flex"}justifyContent={"space-between"}alignItems={"center"}background={"#fff"}gap={0}flexDirection={{ base: "column", md: "row" }}>
+            <Box
+              mb={"10px"}
+              p={"24px"}
+              h={"174px"}
+              w={{ lg: "670px", xl: "932px", "2xl": "1000px" }}
+              borderRadius={"10px"}
+              display={"flex"}
+              justifyContent={"space-between"}
+              alignItems={"center"}
+              background={"#fff"}
+              gap={0}
+              flexDirection={{ base: "column", md: "row" }}
+            >
               <Box
                 display={"flex"}
                 w={"100%"}
@@ -120,7 +130,14 @@ export const Searchproduct = () => {
             </Box>
           </Box>
 
-          <Box className="royxat"w={{ base: "100%", lg: "280px", xl: "300px", "2xl": "360px" }}h={"250px"}background={"#fff"}padding={"20px"}borderRadius={"10px"}>
+          <Box
+            className="royxat"
+            w={{ base: "100%", lg: "280px", xl: "300px", "2xl": "360px" }}
+            h={"250px"}
+            background={"#fff"}
+            padding={"20px"}
+            borderRadius={"10px"}
+          >
             <Heading fontWeight={"600"} fontSize={"18px"} mb={"16px"}>
               Sizning istaklaringiz roʻyxati
             </Heading>

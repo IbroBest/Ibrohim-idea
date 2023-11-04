@@ -47,7 +47,7 @@ export const Tanlanganlar = () => {
               w={"100%"}
               gap={4}
             >
-              <Image src={tanlanganlarLogo} w={"300px"} h={"22  0px"} />
+              <Image src={tanlanganlarLogo} w={{base:'300px',md:"400px"}} h={{base:'200px',md:"260px"}}  />
               <Text color={"#282f3c"} fontSize={"24px"} fontWeight={"600"}>
                 Tanlanganlarda hozircha hech narsa yoʻq
               </Text>

@@ -162,10 +162,10 @@ export const Dynamic = () => {
 
             <Box display={"flex"}alignItems={"start"}justifyContent={{base:"space-between",lg:'none'}}w={{base:"100%",lg:'auto'}}p={{base:'20px',xl:"34px"}}>
 
-              <Image display={{ base: "block", lg: "none" }} src={toj} />
+              <Image display={{ base: "block", lg: "none" }} src={toj} border={'1px solid red'}/>
               <Image w={{base:'130px',sm:'190px',md:'260px',lg:'290px',xl:'366px','2xl':'404px'}} h={{base:'130px',sm:'190px',md:'260px',lg:'290px',xl:"368px"}} src={DynamicItem.img} />
               <Box alignItems={'center'} display={{ base: "flex", lg: "none" }}gap={"10px"}flexDirection={"column"}>
-                <Image display={{ base: "block", sm: "none" }} src={toj} />
+                {/* <Image display={{ base: "block", sm: "none" }} src={toj} /> */}
                 <StarIcon cursor={"pointer"}_hover={{ color: "#DD1470" }}transition={"0.3s"}onClick={() => AllTanlanganlar(DynamicItem)}/>
                 <LinkIcon cursor={"pointer"}_hover={{ color: "#DD1470" }}transition={"0.3s"}onClick={() => AllTaqooslangan(DynamicItem)}/>
               </Box>
@@ -200,7 +200,7 @@ export const Dynamic = () => {
           {/* responsive chiqadigan xarakteristika 👇 */}
           <Box h={"auto"} w={{lg:'264px','2xl':"380px"}} bg={"#FFF"} p={'16px'}borderRadius={'16px'} display={{base:'block',lg:'none'}}>
             <Heading py={'7px'} fontSize={'25px'} color={"#DD1470"}>Xususiyatlari</Heading>
-          <HStack justify={'space-around'} my={'15px'}>
+          <HStack flexDirection={{base:'column',md:'row'}}display={'flex'} justify={{base:'start',md:'space-around'}}alignItems={{base:'start',md:'center'}} my={'15px'}>
 
             <VStack alignItems={'start'}>
                 {xarakter.slice(0,8).map((item)=>(

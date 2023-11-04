@@ -28,7 +28,7 @@ export const Taqqoslash = () => {
         </Box>
         {taqqoslash.length === 0 && (
           <Container borderRadius={'5px'}pb={10}maxW={"1576px"}display={"flex"}flexDirection={"column"}alignItems={"center"}background={"#fff"}p={5}w={"100%"}gap={4}>
-            <Image src={taqqoslashLogo} w={"550px"} h={"250px"} />
+            <Image src={taqqoslashLogo}w={{base:'350px',md:"550px"}} h={{base:'200px',md:"260px"}} />
             <Text color={"#282f3c"} fontSize={"24px"} fontWeight={"600"}>
               Taqqoslashga hozircha hech narsa yoʻq
             </Text>

@@ -81,7 +81,7 @@ export const Savatcha = () => {
             w={"100%"}
             gap={4}
           >
-            <Image src={basketLogo} w={"400px"} h={"260px"} />
+            <Image src={basketLogo} w={{base:'300px',md:"400px"}} h={{base:'200px',md:"260px"}} />
             <Text color={"#282f3c"} fontSize={"24px"} fontWeight={"600"}>
               Savatchada hozircha hech narsa yoʻq
             </Text>
