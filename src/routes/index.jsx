@@ -28,7 +28,7 @@ export const router = createBrowserRouter([
         path: "/manzillar",
         element: <Manzil />,
       },
-      
+
       {
         path: "/savatcha",
         element: <Savatcha />,
