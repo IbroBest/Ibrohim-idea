@@ -3,7 +3,6 @@ import {
   Button,
   Container,
   Heading,
-  Image,
   Text,
 } from "@chakra-ui/react";
 import React, { useContext } from "react";
@@ -12,7 +11,7 @@ import { Context } from "../context/Context";
 import { DeleteIcon, LinkIcon, PlusSquareIcon } from "@chakra-ui/icons";
 
 export const Searchproduct = () => {
-  const {searchProduct,inputValue} = useContext(Context);
+  const {inputValue} = useContext(Context);
 
   return (
     <Box background={"#f2f3f5"}>
