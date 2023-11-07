@@ -78,6 +78,10 @@ export const Dynamic = () => {
     {title:'Barmoq izi: bor'},
 
   ]
+  const Photos = [
+    {img:DynamicItem.gallery[0].original},
+    {img:DynamicItem.gallery[1].original},
+  ]
   return (
     <Box background={"#f2f3f5"}>
       <Container
