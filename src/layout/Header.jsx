@@ -13,7 +13,7 @@ import { React , useContext, useEffect, useState } from "react";
 import instagram from '../assets/icon/instagram.svg'
 import telegram from '../assets/icon/telegram.svg'
 import fecebook from '../assets/icon/fecebook.svg'
-import idea from "../assets/icon/Logo.svg";
+import idea from "../assets/icon/logo.svg";
 
 import { Link } from "react-router-dom";
 import {
