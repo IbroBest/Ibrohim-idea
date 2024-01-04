@@ -27,7 +27,7 @@ export const SaleAndVidio = () => {
             <Image objectFit={'cover'} src={img2} borderRadius={"12px"} w={'100%'} h={{base:'150px',lg:"281px"}} />
             <Heading
               _hover={{ color: "#DD1470", transition: "0.5s" }}
-              fontSize={{base:'10px',md:'18px',lg:'24px'}}
+              fontSize={{base:'13px',md:'18px',lg:'24px'}}
               py={{base:'2px',md:'none'}} 
               fontWeight={"600"}
               lineHeight={{base:'none',lg:'1.9'}}
@@ -35,7 +35,7 @@ export const SaleAndVidio = () => {
             >
               Smartfonlar uchun maxsus narxlar
             </Heading>
-            <Text color={"grey"} py={{base:'2px',md:'none'}}  fontSize={{base:'10px',md:'14px',lg:'16px'}}>
+            <Text color={"grey"} py={{base:'2px',md:'none'}}  fontSize={{base:'13px',md:'14px',lg:'16px'}}>
               09.10.2023 - 31.10.2023
             </Text>
           </Box>
@@ -49,7 +49,7 @@ export const SaleAndVidio = () => {
             <Image objectFit={'cover'} src={img1} borderRadius={"12px"}w={'100%'} h={{base:'150px',lg:"281px"}} />
             <Heading
               _hover={{ color: "#DD1470", transition: "0.5s" }}
-              fontSize={{base:'10px',md:'18px',lg:'24px'}}
+              fontSize={{base:'13px',md:'18px',lg:'24px'}}
               py={{base:'4px',md:'none'}} 
               fontWeight={"600"}
               lineHeight={{base:'none',lg:'1.9'}}
@@ -57,7 +57,7 @@ export const SaleAndVidio = () => {
             >
               Boshlandi <span style={{ color: "red" }}>!</span>
             </Heading>
-            <Text color={"grey"} py={{base:'2px',md:'none'}}  fontSize={{base:'10px',md:'14px',lg:'16px'}}>
+            <Text color={"grey"} py={{base:'2px',md:'none'}}  fontSize={{base:'13px',md:'14px',lg:'16px'}}>
               09.10.2023 - 31.10.2023
             </Text>
           </Box>
