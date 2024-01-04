@@ -23,7 +23,7 @@ export const BottomHeader = () => {
         <Box position={"relative"}textAlign={"center"}>
           <Link to={"/"}>
           <ArrowBackIcon color={'#9499a5'} fontSize={'22px'}/>
-            <Text color={'#9499a5'} _hover={{ color: "#DD1470" }}fontSize={'18px'}>
+            <Text color={'#9499a5'} _hover={{ color: "#DD1470" }}fontSize={'15px'}>
               Bosh sahifaga
             </Text>
           </Link>
@@ -32,7 +32,7 @@ export const BottomHeader = () => {
         <Box  position={"relative"}textAlign={"center"}>
           <Link to={"/tanlanganlar"}>
             <StarIcon color={'#9499a5'} fontSize={"18px"} mb={1} />
-            <Text color={'#9499a5'} _hover={{ color: "#DD1470" }} fontSize={'18px'}>
+            <Text color={'#9499a5'} _hover={{ color: "#DD1470" }} fontSize={'15px'}>
               Tanlanganlar
             </Text>
             <Text  fontSize={'11px'}
@@ -43,7 +43,7 @@ export const BottomHeader = () => {
         <Box position={"relative"}textAlign={"center"}>
           <Link to={"/savatcha"}>
             <PlusSquareIcon color={'#9499a5'} fontSize={'18px'} mb={1} />
-            <Text color={'#9499a5'} _hover={{ color: "#DD1470" }} fontSize={'18px'}>
+            <Text color={'#9499a5'} _hover={{ color: "#DD1470" }} fontSize={'15px'}>
               Savatcha
             </Text>
             <Text  fontSize={'11px'}
@@ -59,7 +59,7 @@ export const BottomHeader = () => {
           <Link to={"/taqqoslash"}>
             <Text display={'flex'}flexDirection={'column'}alignItems={'center'}>
             <LinkIcon color={'#9499a5'} fontSize={'18px'}mb={1} />
-              <Text  fontSize={'18px'} transition={'0.4s'} color={'#9499a5'} _hover={{ color: "#DD1470" }}>Taqqoslash</Text>
+              <Text  fontSize={'15px'} transition={'0.4s'} color={'#9499a5'} _hover={{ color: "#DD1470" }}>Taqqoslash</Text>
             </Text>
             <Text fontSize={'11px'}
               display={"flex"}justifyContent={"center"}alignItems={"center"}top={"-5px"}right={'25px'}borderRadius={"50%"}background={"#FFBF3C"}w={"14px"}h={"14px"}position={"absolute"}>{taqqoslash.length}
@@ -70,7 +70,7 @@ export const BottomHeader = () => {
           <Link to={"/taqqoslash"}>
             <Box onClick={openModal} display={'flex'}flexDirection={'column'}alignItems={'center'} >
                 <LockIcon color={'#9499a5'}fontSize={'18px'}mb={'7px'} />
-                  <Text transition={'0.4s'}color={'#9499a5'}  _hover={{color:'#DD1470'}}fontSize={'18px'}>kirish</Text>
+                  <Text transition={'0.4s'}color={'#9499a5'}  _hover={{color:'#DD1470'}}fontSize={'15px'}>kirish</Text>
                 <Login/>
             </Box>
           </Link>
