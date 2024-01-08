@@ -21,7 +21,7 @@ export const SaleAndVidio = () => {
             p={{base:'10px',md:"25px"}}
             w={{base:'318px',lg:"510px"}}
             h={{base:'240px',lg:"400px"}}
-            bg={"#FFF"}
+            bg={"#ffffff"}
             borderRadius={"15px"}
           >
             <Image objectFit={'cover'} src={img2} borderRadius={"12px"} w={'100%'} h={{base:'150px',lg:"281px"}} />
