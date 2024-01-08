@@ -55,30 +55,7 @@ export const ContextProvider = ({ children }) => {
   }, [taqqoslash]);
 
   return (
-    <Context.Provider
-      value={{
-        searchData,
-        SearchProduct,
-        setSearchProduct,
-        inputValue,
-        setInputValue,
-        attributes,
-        setAtributes,
-        DynamicItem,
-        setDynamicItem,
-        setData,
-        data,
-        allBasket,
-        setBasket,
-        basket,
-        AllTanlanganlar,
-        tanlanganlar,
-        setTanlanganlar,
-        taqqoslash,
-        setTaqqoslash,
-        AllTaqooslangan,
-      }}
-    >
+    <Context.Provider value={{searchData,SearchProduct,setSearchProduct,inputValue,setInputValue,attributes,setAtributes,DynamicItem,setDynamicItem,setData,data,allBasket,setBasket,basket,AllTanlanganlar,tanlanganlar,setTanlanganlar,taqqoslash,setTaqqoslash,AllTaqooslangan,}}>
       {children}
     </Context.Provider>
   );

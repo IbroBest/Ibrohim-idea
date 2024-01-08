@@ -10,11 +10,12 @@ export const BottomHeader = () => {
   const {openModal} = useContext(ModalContext)
 
   const {basket,tanlanganlar,taqqoslash} = useContext(Context)
+  // 20px
 
   return (
     <Box>
       
-      <Box  alignItems={'center'} w={'100%'}bg={'#FFF'}p={'16px 10px'} justifyContent={'space-around'} flexDirection={{base:'column',sm:'row'}}  display={{base:'flex',lg:"none"}} position={'fixed'}bottom={0} px={5}>
+      <Box  alignItems={'center'} w={'100%'}bg={'#FFF'}p={'16px 10px'} justifyContent={'space-around'} flexDirection={{base:'column',sm:'row'}}  display={{base:'flex',lg:"none"}} position={'fixed'}bottom={0} px={'10px'}>
 
         {/* 480 > chiqadigan itemlar 👇  */}
 
