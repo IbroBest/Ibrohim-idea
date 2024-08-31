@@ -30,6 +30,7 @@ export const SotuvlarXiti = () => {
       )
       .then((res) => setData(res.data.data));
   }, []);
+
   const SubmitData = (item) => {
     allBasket(item);
   };

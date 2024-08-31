@@ -1,9 +1,7 @@
 import { Box, Button, Container, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
-import { Link } from "react-router-dom";
 import img1 from "../assets/image/Aksiya__img1.webp";
 import img2 from "../assets/image/Aksiya__img2.webp";
-import { color } from "framer-motion";
 
 export const SaleAndVidio = () => {
   return (
