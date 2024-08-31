@@ -15,7 +15,7 @@ const App = () => {
   const { data } = useContext(Context);
   return (
     <Box background={"#f2f3f5"}>
-      {!data.length && (
+      {/* {!data.length && (
         <Box
           background={"#FFF"}
           position={"absolute"}
@@ -33,7 +33,7 @@ const App = () => {
             color="#DD1470"
           />
         </Box>
-      )}
+      )} */}
       <Boshlandi />
       <SotuvlarXiti />
       <MobilTelefonlar />
